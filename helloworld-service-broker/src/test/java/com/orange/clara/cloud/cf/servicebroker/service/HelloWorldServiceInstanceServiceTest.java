@@ -10,7 +10,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.orange.clara.cloud.cf.servicebroker.log.service;
+package com.orange.clara.cloud.cf.servicebroker.service;
 
 import org.cloudfoundry.community.servicebroker.model.CreateServiceInstanceRequest;
 import org.cloudfoundry.community.servicebroker.model.ServiceInstance;

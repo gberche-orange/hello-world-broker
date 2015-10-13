@@ -10,14 +10,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.orange.clara.cloud.cf.servicebroker.log.config;
+package com.orange.clara.cloud.cf.servicebroker.config;
 
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.context.web.SpringBootServletInitializer;
+import org.cloudfoundry.community.servicebroker.model.BrokerApiVersion;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-public class WebXml extends SpringBootServletInitializer {
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(Application.class);
+@Configuration
+@ComponentScan(basePackages = {"org.cloudfoundry.community.servicebroker", "com.orange.clara.cloud.cf.servicebroker.service"})
+public class BrokerConfig {
+
+    @Bean
+    public BrokerApiVersion brokerApiVersion() {
+        return new BrokerApiVersion();
     }
 }
