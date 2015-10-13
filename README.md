@@ -7,4 +7,4 @@ to experiment with developping cloudfoundry service brokers
 
 Required environment variables:
 * broker_user
-* broker.password
+* broker_password
